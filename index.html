@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,shrink-to-fit=no,maximum-scale=1,user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#ffffff" />
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#00a300" />
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>General Service — Ремонт телефонов, планшетов, ноутбуков</title>
+    <link href="./assets/css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div
+      class="modal fade"
+      id="callback"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="callbackLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-md modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="modal-wrap">
+            <div class="modal-header">
+              <h5 class="modal-title" id="callbackLabel">
+                Оставьте заявку и мы свяжемся с Вами <span class="green">в течение 3-х минут!</span>
+              </h5>
+            </div>
+            <div class="modal-body">
+              <form>
+                <span><input type="hidden" name="formname" value="" /> </span
+                ><span class="form-control-wrap"
+                  ><input class="form-control" placeholder="Ваше имя" name="fullname" /> </span
+                ><span class="form-control-wrap"
+                  ><input
+                    type="tel"
+                    class="form-control mask-phone"
+                    placeholder="Ваш телефон"
+                    name="phone"
+                    required
+                  /> </span
+                ><button type="submit" class="btn btn-green">Оставить заявку</button>
+              </form>
+              <small class="form-text"
+                >Нажимая кнопку “Оставить заявку” Вы соглашаетесь на обработку персональных данных.</small
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="success" tabindex="-1" role="dialog" aria-labelledby="successLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="modal-wrap">
+            <div class="modal-header">
+              <h5 class="modal-title" id="successLabel">Спасибо</h5>
+              <h6 class="modal-subtitle">Мы перезвоним вам в течение 3 минут</h6>
+            </div>
+            <div class="modal-body">
+              <button type="submit" class="btn btn-green" data-dismiss="modal" aria-label="Close">Хорошо</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header id="header" class="header" style="background-image: url('assets/img/background.jpg');">
+      <nav id="main-navigation" class="navigation">
+        <div class="container">
+          <div class="row justify-content-between align-items-center">
+            <div class="col">
+              <a href="/" class="logo"
+                ><div class="logo__img"><img src="assets/img/logo.svg" alt="" /></div>
+                <div class="logo__text">General Service <small>Ремонт телефонов, планшетов, ноутбуков</small></div></a
+              >
+            </div>
+            <div class="col d-flex justify-content-end navigation__contacts-col">
+              <div class="navigation__contacts">
+                <a href="tel:+71111111111" class="navigation__contacts-phone d-lg-none d-xl-inline-block"
+                  ><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M5.64305 10.841C8.02071 14.8928 9.60583 16.5136 13.5686 18.9446L16.7388 15.7032C18.3578 16.1261 20.4016 16.7066 22.042 16.6997C22.5888 16.6953 23.1334 17.2543 23.1481 17.7884L23.1113 22.8452C23.109 23.4044 22.5601 23.9658 22.0028 24C8.34312 24.0246 0.446548 15.9505 0.00262791 1.95701C-0.0427114 1.41631 0.50634 0.85491 1.05313 0.852596H6.46993C7.06801 0.828973 7.61261 1.38579 7.7424 1.72588C7.60374 3.62237 8.39022 5.9357 8.81329 7.60065L5.64305 10.841Z"
+                      fill="#47B725"
+                    />
+                  </svg>
+                  +71111111111 </a
+                ><button type="button" class="btn btn-green" data-toggle="modal" data-target="#callback">
+                  Перезвоните мне
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="header__offer">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-7 col-lg-8">
+              <h2 class="header__offer-title">Подберите мастера,</h2>
+              <div class="header__offer-tagline">
+                который специализируется на ремонте вашего типа устройств
+                <small>Мы сразу рассчитаем вам стоимость ремонта</small>
+              </div>
+              <button class="btn btn-green" data-quiz-opener>Подобрать мастера</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="features">
+        <div class="container">
+          <div class="features__list">
+            <div class="features__list-item">
+              <div class="features__list-item-icon">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M36 6H18V7.33333H36V6Z" fill="#53BC34" />
+                  <path d="M29.3333 8.66667H18V10H29.3333V8.66667Z" fill="#53BC34" />
+                  <path d="M29.3333 11.3333H18V12.6667H29.3333V11.3333Z" fill="#53BC34" />
+                  <path d="M36 3.33333H23.3334V4.66667H36V3.33333Z" fill="#53BC34" />
+                  <path d="M22 3.33333H20.6666V4.66667H22V3.33333Z" fill="#53BC34" />
+                  <path d="M20.6667 26.6667H19.3334V28H20.6667V26.6667Z" fill="#53BC34" />
+                  <path
+                    d="M11.1381 4.47134L10.1954 3.52867L8.86206 4.86201C8.60181 5.12234 8.60181 5.54434 8.86206 5.80467L10.1954 7.13801L11.1381 6.19534L10.2761 5.33334L11.1381 4.47134Z"
+                    fill="#53BC34"
+                  />
+                  <path
+                    d="M16.4713 4.86201L15.138 3.52867L14.1953 4.47134L15.0573 5.33334L14.1953 6.19534L15.138 7.13801L16.4713 5.80467C16.7316 5.54434 16.7316 5.12234 16.4713 4.86201Z"
+                    fill="#53BC34"
+                  />
+                  <path
+                    d="M12.7013 3.12173L11.3667 7.12166L12.6309 7.54345L13.9654 3.54352L12.7013 3.12173Z"
+                    fill="#53BC34"
+                  />
+                  <path
+                    d="M34.6667 20.6667V15.3333H33.3334V20.6667H32V14H30.6667V20.6667H29.3334V17.3333H28V20.6667H26.6667V16.6667H25.3334V20.6667H24V18H22.6667V20.6667H21.3334V22H36V20.6667H34.6667Z"
+                    fill="#53BC34"
+                  />
+                  <path
+                    d="M35.3333 0H4.66663C2.45838 0.00216667 0.668793 1.79175 0.666626 4V17.084V17.09V24.6667V26.6667C0.668793 28.8749 2.45838 30.6645 4.66663 30.6667H12.9213L10.2546 36H6.66663C5.56204 36 4.66663 36.8954 4.66663 38C4.66663 39.1046 5.56204 40 6.66663 40H33.3333C34.4379 40 35.3333 39.1046 35.3333 38C35.3333 36.8954 34.4379 36 33.3333 36H29.7453L27.0786 30.6667H35.3333C37.5415 30.6645 39.3311 28.8749 39.3333 26.6667V4C39.3311 1.79175 37.5415 0.00216667 35.3333 0ZM1.99996 9.38L3.51529 11.184C3.64196 11.3349 3.82896 11.422 4.02596 11.422H6.06663C6.26363 11.422 6.45063 11.3349 6.57729 11.184L8.09329 9.38L9.58929 9.866L9.75463 12.2147C9.76829 12.4111 9.86813 12.5914 10.0273 12.7073L11.6786 13.9073C11.8384 14.0227 12.0407 14.0619 12.232 14.0147L14.5206 13.446L15.446 14.7187L14.1986 16.7187C14.0953 16.8863 14.0714 17.0911 14.1333 17.278L14.7646 19.2187C14.8254 19.4058 14.9656 19.5567 15.148 19.6307L17.3333 20.5167V22.09L15.1466 22.976C14.9639 23.0497 14.8234 23.2009 14.7633 23.3887L14.5633 24H10.7226C12.2166 20.872 10.892 17.1251 7.76396 15.6311C5.92671 14.7536 3.77788 14.8218 1.99996 15.814V9.38ZM1.99996 17.4C4.15629 15.7178 7.26813 16.1021 8.95029 18.2585C10.2491 19.9233 10.3494 22.2287 9.19996 24H1.99996V17.4ZM33.3333 37.3333C33.7015 37.3333 34 37.6318 34 38C34 38.3682 33.7015 38.6667 33.3333 38.6667H6.66663C6.29846 38.6667 5.99996 38.3682 5.99996 38C5.99996 37.6318 6.29846 37.3333 6.66663 37.3333H33.3333ZM28.2546 36H11.7453L14.412 30.6667H25.588L28.2546 36ZM38 26.6667C38 28.1394 36.806 29.3333 35.3333 29.3333H4.66663C3.19388 29.3333 1.99996 28.1394 1.99996 26.6667V25.3333H9.54796H9.55396H38V26.6667ZM38 24H16.17L18.2506 23.1567C18.502 23.0547 18.6665 22.8106 18.6666 22.5393V20.0667C18.6667 19.7952 18.5022 19.5508 18.2506 19.4487L15.9333 18.5113L15.4946 17.1613L16.816 15.0413C16.9593 14.811 16.9487 14.5168 16.7893 14.2973L15.336 12.2973C15.1764 12.0776 14.8995 11.9766 14.636 12.042L12.212 12.642L11.0666 11.81L10.8913 9.32333C10.8722 9.05225 10.6905 8.81983 10.432 8.736L8.08196 7.972C7.82338 7.88967 7.54071 7.97092 7.36529 8.178L5.76063 10.088H4.33863L2.73329 8.178C2.55779 7.97067 2.27471 7.88933 2.01596 7.972L1.99996 7.978V4C1.99996 2.52725 3.19388 1.33333 4.66663 1.33333H35.3333C36.806 1.33333 38 2.52725 38 4V24Z"
+                    fill="#53BC34"
+                  />
+                </svg>
+              </div>
+              <div class="features__list-item-title">Бесплатная диагностика</div>
+            </div>
+            <div class="features__list-item">
+              <div class="features__list-item-icon">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0)">
+                    <path
+                      d="M35 0H9.66671C8.19396 0 7.00004 1.19392 7.00004 2.66667V25.3333H6.33337C5.96521 25.3333 5.66671 25.6318 5.66671 26V26.6667H2.33337V28H5.66671V37.3333H2.33337V38.6667H5.66671V39.3333C5.66671 39.7015 5.96521 40 6.33337 40H13C13.3682 40 13.6667 39.7015 13.6667 39.3333V38.6667H15.5114C17.321 39.5418 19.3046 39.9976 21.3147 40H28.6667C29.5648 39.9966 30.3811 39.4781 30.766 38.6667H35C36.4728 38.6667 37.6667 37.4728 37.6667 36V2.66667C37.6667 1.19392 36.4728 0 35 0ZM12.3334 38.6667H7.00004V26.6667H12.3334V38.6667ZM28.6667 30C29.219 30 29.6667 30.4478 29.6667 31C29.6667 31.5523 29.219 32 28.6667 32H27V33.3333H28.6667C29.219 33.3333 29.6667 33.7811 29.6667 34.3333C29.6667 34.8856 29.219 35.3333 28.6667 35.3333H27V36.6667H28.6667C29.219 36.6667 29.6667 37.1144 29.6667 37.6667C29.6667 38.2189 29.219 38.6667 28.6667 38.6667H21.3147C19.4575 38.6636 17.6262 38.23 15.9647 37.4C15.8719 37.355 15.7699 37.3322 15.6667 37.3333H13.6667V28H15.6667C15.8284 28 15.9845 27.9412 16.106 27.8347L17.302 26.7887C19.81 24.6057 21.0129 21.2825 20.4834 18H20.6167C21.7125 17.9967 22.6688 18.742 22.9334 19.8053C23.3944 21.6342 23.2637 23.5621 22.56 25.312L22.5487 25.3333H21V26.6667H28.6667C29.219 26.6667 29.6667 27.1144 29.6667 27.6667C29.6667 28.2189 29.219 28.6667 28.6667 28.6667H27V30H28.6667ZM36.3334 36C36.3334 36.7364 35.7365 37.3333 35 37.3333H30.966C30.8953 36.8271 30.6593 36.3583 30.2947 36C31.2152 35.1071 31.2375 33.6371 30.3446 32.7166C30.3282 32.6997 30.3116 32.6831 30.2947 32.6667C31.2152 31.7738 31.2375 30.3038 30.3446 29.3833C30.3282 29.3663 30.3116 29.3498 30.2947 29.3333C31.217 28.436 31.2373 26.9608 30.3399 26.0385C29.9005 25.5868 29.2968 25.3324 28.6667 25.3333H23.964C24.6191 23.4499 24.7095 21.4161 24.224 19.482C23.8126 17.8262 22.3249 16.6644 20.6187 16.6667H19.6667C19.2985 16.6667 19 16.9652 19 17.3333C19 17.3879 19.0068 17.4423 19.02 17.4953C19.7858 20.5272 18.782 23.7321 16.4234 25.7853L15.416 26.6667H13.6667V26C13.6667 25.6318 13.3682 25.3333 13 25.3333H8.33337V6.66667H36.3334V36ZM36.3334 5.33333H8.33337V2.66667C8.33337 1.93025 8.93029 1.33333 9.66671 1.33333H35C35.7365 1.33333 36.3334 1.93025 36.3334 2.66667V5.33333Z"
+                      fill="#53BC34"
+                    />
+                    <path d="M10.3333 36H9V37.3333H10.3333V36Z" fill="#53BC34" />
+                    <path d="M11 2.66667H9.66663V4H11V2.66667Z" fill="#53BC34" />
+                    <path d="M13.6667 2.66667H12.3334V4H13.6667V2.66667Z" fill="#53BC34" />
+                    <path d="M16.3333 2.66667H15V4H16.3333V2.66667Z" fill="#53BC34" />
+                    <path d="M24.3334 11.3333H10.3334V12.6667H24.3334V11.3333Z" fill="#53BC34" />
+                    <path d="M24.3334 14H10.3334V15.3333H24.3334V14Z" fill="#53BC34" />
+                    <path d="M24.3333 8.66667H15.6666V10H24.3333V8.66667Z" fill="#53BC34" />
+                    <path d="M14.3333 8.66667H13V10H14.3333V8.66667Z" fill="#53BC34" />
+                    <path
+                      d="M33.6667 16.6667H27C26.6319 16.6667 26.3334 16.9652 26.3334 17.3333V22.6667C26.3334 23.0348 26.6319 23.3333 27 23.3333H33.6667C34.0349 23.3333 34.3334 23.0348 34.3334 22.6667V17.3333C34.3334 16.9652 34.0349 16.6667 33.6667 16.6667ZM33 22H27.6667V18H33V22Z"
+                      fill="#53BC34"
+                    />
+                    <path
+                      d="M33.6667 8.66667H27C26.6319 8.66667 26.3334 8.96517 26.3334 9.33333V14.6667C26.3334 15.0348 26.6319 15.3333 27 15.3333H33.6667C34.0349 15.3333 34.3334 15.0348 34.3334 14.6667V9.33333C34.3334 8.96517 34.0349 8.66667 33.6667 8.66667ZM33 14H27.6667V10H33V14Z"
+                      fill="#53BC34"
+                    />
+                    <path
+                      d="M15.6667 16.6667H11C10.6319 16.6667 10.3334 16.9652 10.3334 17.3333V22.6667C10.3334 23.0348 10.6319 23.3333 11 23.3333H15.6667C16.0349 23.3333 16.3334 23.0348 16.3334 22.6667V17.3333C16.3334 16.9652 16.0349 16.6667 15.6667 16.6667ZM15 22H11.6667V18H15V22Z"
+                      fill="#53BC34"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath><rect width="40" height="40" fill="white" /></clipPath>
+                  </defs>
+                </svg>
+              </div>
+              <div class="features__list-item-title">Контроль качества</div>
+            </div>
+            <div class="features__list-item">
+              <div class="features__list-item-icon">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0)">
+                    <path
+                      d="M40 10.6667V9.33333H36.6667V6.66667C36.6667 6.48983 36.5963 6.32033 36.4713 6.19533L33.8047 3.52867C33.6797 3.40367 33.5102 3.33333 33.3333 3.33333H30.6667V0H29.3333V3.33333H27.3333V0H26V3.33333H24V0H22.6667V3.33333H20.6667V0H19.3333V3.33333H17.3333V0H16V3.33333H14V0H12.6667V3.33333H10.6667V0H9.33333V3.33333H6.66667C6.48983 3.33333 6.32033 3.40367 6.19533 3.52867L3.52867 6.19533C3.40367 6.32033 3.33333 6.48983 3.33333 6.66667V9.33333H0V10.6667H3.33333V12.6667H0V14H3.33333V16H0V17.3333H3.33333V19.3333H0V20.6667H3.33333V22.6667H0V24H3.33333V26H0V27.3333H3.33333V29.3333H0V30.6667H3.33333V33.3333C3.33333 33.5102 3.40367 33.6797 3.52867 33.8047L6.19533 36.4713C6.32033 36.5963 6.48983 36.6667 6.66667 36.6667H9.33333V40H10.6667V36.6667H12.6667V40H14V36.6667H16V35.3333H6.94267L4.66667 33.0573V6.94267L6.94267 4.66667H33.0573L35.3333 6.94267V33.0573L33.0573 35.3333H24V36.6667H26V40H27.3333V36.6667H29.3333V40H30.6667V36.6667H33.3333C33.5102 36.6667 33.6797 36.5963 33.8047 36.4713L36.4713 33.8047C36.5963 33.6797 36.6667 33.5102 36.6667 33.3333V30.6667H40V29.3333H36.6667V27.3333H40V26H36.6667V24H40V22.6667H36.6667V20.6667H40V19.3333H36.6667V17.3333H40V16H36.6667V14H40V12.6667H36.6667V10.6667H40Z"
+                      fill="#53BC34"
+                    />
+                    <path
+                      d="M8.00004 7.33333C7.63187 7.33333 7.33337 7.63183 7.33337 8V10.6667H8.66671V8.66667H10.6667V7.33333H8.00004Z"
+                      fill="#53BC34"
+                    />
+                    <path
+                      d="M8.66671 31.3333V29.3333H7.33337V32C7.33337 32.3682 7.63187 32.6667 8.00004 32.6667H10.6667V31.3333H8.66671Z"
+                      fill="#53BC34"
+                    />
+                    <path
+                      d="M31.3334 29.3333V31.3333H29.3334V32.6667H32C32.3682 32.6667 32.6667 32.3682 32.6667 32V29.3333H31.3334Z"
+                      fill="#53BC34"
+                    />
+                    <path
+                      d="M32 7.33333H29.3334V8.66667H31.3334V10.6667H32.6667V8C32.6667 7.63183 32.3682 7.33333 32 7.33333Z"
+                      fill="#53BC34"
+                    />
+                    <path
+                      d="M31.2755 15.4987L29.4221 14.7187L28.7335 13.06L29.4935 11.1933C29.5945 10.945 29.537 10.6603 29.3475 10.4707L27.1761 8.29801C26.9864 8.10817 26.7013 8.05059 26.4528 8.15201L24.5861 8.91201L22.9335 8.22534L22.1535 6.37334C22.0495 6.12576 21.8073 5.96467 21.5388 5.96467H18.4668C18.1983 5.96467 17.956 6.12576 17.8521 6.37334L17.0668 8.22534L15.4081 8.91267L13.5415 8.15267C13.293 8.05134 13.0079 8.10884 12.8181 8.29867L10.6461 10.4713C10.4566 10.6609 10.3991 10.9457 10.5001 11.194L11.2601 13.0607L10.5728 14.7187L8.71947 15.4987C8.47238 15.603 8.31197 15.8452 8.31213 16.1133V19.1853C8.31197 19.4535 8.47238 19.6957 8.71947 19.8L10.5728 20.58L11.2668 22.238L10.5068 24.1047C10.4057 24.353 10.4632 24.6378 10.6528 24.8273L12.8215 27C13.0114 27.1896 13.2964 27.2469 13.5448 27.1453L15.4115 26.3853L17.0701 27.072L17.8501 28.9253C17.9545 29.1733 18.1977 29.3343 18.4668 29.3333H19.3335V31.3333H18.0001C17.632 31.3333 17.3335 31.6318 17.3335 32V37.3333C17.3335 38.8061 18.5274 40 20.0001 40C21.4729 40 22.6668 38.8061 22.6668 37.3333V32C22.6668 31.6318 22.3683 31.3333 22.0001 31.3333H20.6668V29.3333H21.5335C21.8018 29.3334 22.044 29.1727 22.1481 28.9253L22.9281 27.0727L24.5868 26.3853L26.4535 27.1453C26.702 27.2467 26.987 27.1892 27.1768 26.9993L29.3488 24.8267C29.5384 24.6371 29.5959 24.3523 29.4948 24.104L28.7348 22.2373L29.4221 20.5787L31.2755 19.7987C31.5225 19.6943 31.683 19.4522 31.6828 19.184V16.1133C31.683 15.8452 31.5225 15.603 31.2755 15.4987ZM21.3335 37.3333C21.3335 38.0698 20.7365 38.6667 20.0001 38.6667C19.2637 38.6667 18.6668 38.0698 18.6668 37.3333V36.6667H21.3335V37.3333ZM21.3335 32.6667V35.3333H18.6668V32.6667H21.3335ZM30.3508 18.742L28.6535 19.4573C28.492 19.5256 28.3638 19.6547 28.2968 19.8167L27.4001 21.9813C27.3336 22.1434 27.3336 22.3253 27.4001 22.4873L28.0948 24.2L26.5481 25.746L24.8388 25.05C24.6765 24.9833 24.4945 24.9833 24.3321 25.05L22.1668 25.946C22.0046 26.0132 21.8755 26.1416 21.8075 26.3033L21.0935 28H18.9068L18.1928 26.3027C18.1245 26.1408 17.9952 26.0123 17.8328 25.9453L15.6668 25.0487C15.5047 24.9822 15.3229 24.9822 15.1608 25.0487L13.4508 25.7447L11.9055 24.2L12.6001 22.4873C12.6666 22.3253 12.6666 22.1434 12.6001 21.9813L11.7035 19.8167C11.6365 19.6547 11.5083 19.5256 11.3468 19.4573L9.64947 18.742V16.5553L11.3468 15.8413C11.5083 15.7731 11.6365 15.644 11.7035 15.482L12.6001 13.3173C12.6668 13.155 12.6668 12.973 12.6001 12.8107L11.9035 11.1007L13.4501 9.55467L15.1595 10.2507C15.3215 10.3187 15.5041 10.3187 15.6661 10.2507L17.8315 9.35334C17.9936 9.28617 18.1227 9.15776 18.1908 8.99601L18.9048 7.29934H21.0915L21.8055 8.99601C21.8735 9.15776 22.0026 9.28617 22.1648 9.35334L24.3335 10.2493C24.4953 10.3173 24.6776 10.3173 24.8395 10.2493L26.5495 9.55334L28.0961 11.0993L27.4001 12.8107C27.3335 12.973 27.3335 13.155 27.4001 13.3173L28.2968 15.482C28.3638 15.644 28.492 15.7731 28.6535 15.8413L30.3508 16.556V18.742Z"
+                      fill="#53BC34"
+                    />
+                    <path
+                      d="M20 10.9827C16.3181 10.9827 13.3334 13.9674 13.3334 17.6493C13.3378 21.3294 16.32 24.3116 20 24.316C23.682 24.316 26.6667 21.3313 26.6667 17.6493C26.6667 13.9674 23.682 10.9827 20 10.9827ZM20 22.9827C17.0545 22.9827 14.6667 20.5948 14.6667 17.6493C14.67 14.7052 17.0559 12.3193 20 12.316C22.9455 12.316 25.3334 14.7038 25.3334 17.6493C25.3334 20.5948 22.9455 22.9827 20 22.9827Z"
+                      fill="#53BC34"
+                    />
+                    <path d="M20.6667 16.9827H19.3334V18.316H20.6667V16.9827Z" fill="#53BC34" />
+                    <path d="M18 16.9827H16.6666V18.316H18V16.9827Z" fill="#53BC34" />
+                    <path d="M23.3333 16.9827H22V18.316H23.3333V16.9827Z" fill="#53BC34" />
+                  </g>
+                  <defs>
+                    <clipPath><rect width="40" height="40" fill="white" /></clipPath>
+                  </defs>
+                </svg>
+              </div>
+              <div class="features__list-item-title">Ремонт за день</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="constructor">
+      <div class="constructor__bg" style="background-image: url('assets/img/background.jpg');" data-quiz-closer></div>
+      <div class="container">
+        <div class="constructor__wrap">
+          <div class="constructor__main">
+            <div class="constructor__percentage">Готово:&nbsp; <span id="constructor-percentage">0</span></div>
+            <div class="constructor__progress"></div>
+            <div class="constructor__question">Какая у вас модель телевизора?</div>
+            <form class="constructor__answers-list">
+              <div class="constructor__answers-list-item constructor__answers-list-item--active">
+                <label class="radio radio--img radio--quarter" data-master="vladimir"
+                  ><input type="radio" name="deviceType" value="notebook" />
+                  <div class="radio-img"><img src="assets/img/notebook.png" alt="" /></div>
+                  <div class="radio-title">
+                    <div class="radio-dummy"></div>
+                    Ноутбук
+                  </div></label
+                >
+                <label class="radio radio--img radio--quarter" data-master="nikolai"
+                  ><input type="radio" name="deviceType" value="pc" />
+                  <div class="radio-img"><img src="assets/img/pc.png" alt="" /></div>
+                  <div class="radio-title">
+                    <div class="radio-dummy"></div>
+                    ПК
+                  </div></label
+                >
+                <label class="radio radio--img radio--quarter" data-master="dmitry"
+                  ><input type="radio" name="deviceType" value="monoblock" />
+                  <div class="radio-img"><img src="assets/img/monoblock.png" alt="" /></div>
+                  <div class="radio-title">
+                    <div class="radio-dummy"></div>
+                    Моноблок
+                  </div></label
+                >
+                <label class="radio radio--img radio--quarter" data-master="alexei"
+                  ><input type="radio" name="deviceType" value="macbook" />
+                  <div class="radio-img"><img src="assets/img/macbook.png" alt="" /></div>
+                  <div class="radio-title">
+                    <div class="radio-dummy"></div>
+                    MacBook
+                  </div></label
+                >
+              </div>
+              <div class="constructor__answers-list-item">
+                <div class="constructor__answers-list-item-column">
+                  <label class="radio"
+                    ><input type="radio" name="troubleType" value="Не включается" />
+                    <div class="radio-title">
+                      <div class="radio-dummy"></div>
+                      Не включается
+                    </div></label
+                  >
+                  <label class="radio"
+                    ><input type="radio" name="troubleType" value="Перезагружается" />
+                    <div class="radio-title">
+                      <div class="radio-dummy"></div>
+                      Перезагружается
+                    </div></label
+                  >
+                  <label class="radio"
+                    ><input type="radio" name="troubleType" value="Тормозит" />
+                    <div class="radio-title">
+                      <div class="radio-dummy"></div>
+                      Тормозит
+                    </div></label
+                  >
+                  <label class="radio"
+                    ><input type="radio" name="troubleType" value="Вирусы" />
+                    <div class="radio-title">
+                      <div class="radio-dummy"></div>
+                      Вирусы
+                    </div></label
+                  >
+                </div>
+                <div class="constructor__answers-list-item-column">
+                  <label class="radio"
+                    ><input type="radio" name="troubleType" value="Залили водой" />
+                    <div class="radio-title">
+                      <div class="radio-dummy"></div>
+                      Залили водой
+                    </div></label
+                  >
+                  <label class="radio"
+                    ><input type="radio" name="troubleType" value="Проблема с матрицей" />
+                    <div class="radio-title">
+                      <div class="radio-dummy"></div>
+                      Проблема с матрицей
+                    </div></label
+                  >
+                  <span class="form-control-wrap">
+                    <textarea name="troubleTypeDesc" class="form-control" placeholder="Впишите свою"></textarea>
+                  </span>
+                </div>
+              </div>
+              <div class="constructor__answers-list-item">
+                <div class="constructor__answers-list-item-column">
+                  <label class="radio"
+                    ><input type="radio" name="repairedPreviously" value="Да" />
+                    <div class="radio-title">
+                      <div class="radio-dummy"></div>
+                      Да
+                    </div></label
+                  >
+                  <label class="radio"
+                    ><input type="radio" name="repairedPreviously" value="Нет" />
+                    <div class="radio-title">
+                      <div class="radio-dummy"></div>
+                      Нет
+                    </div></label
+                  >
+                </div>
+              </div>
+              <div class="constructor__answers-list-item">
+                <div class="constructor__answers-list-item-column">
+                  <label class="radio"
+                    ><input type="radio" name="oparatingTime" value="До 2-х лет" />
+                    <div class="radio-title">
+                      <div class="radio-dummy"></div>
+                      До 2 лет
+                    </div></label
+                  >
+                  <label class="radio"
+                    ><input type="radio" name="oparatingTime" value="От 2 до 5 лет" />
+                    <div class="radio-title">
+                      <div class="radio-dummy"></div>
+                      От 2 до 5 лет
+                    </div></label
+                  >
+                  <label class="radio"
+                    ><input type="radio" name="oparatingTime" value="Более 5 лет" />
+                    <div class="radio-title">
+                      <div class="radio-dummy"></div>
+                      Более 5 лет
+                    </div></label
+                  >
+                </div>
+              </div>
+              <div class="constructor__answers-list-item">
+                <div class="constructor__answers-list-item-column">
+                  <label class="radio"
+                    ><input type="radio" name="gift" value="Скидка 20% на ремонт" />
+                    <div class="radio-title">
+                      <div class="radio-dummy"></div>
+                      Скидка 20% на ремонт
+                    </div></label
+                  >
+                  <label class="radio"
+                    ><input type="radio" name="gift" value="Бесплатная диагносттика устройства" />
+                    <div class="radio-title">
+                      <div class="radio-dummy"></div>
+                      Бесплатная диагностика устройства
+                    </div></label
+                  >
+                  <label class="radio"
+                    ><input type="radio" name="gift" value="Антивирус на 1 год" />
+                    <div class="radio-title">
+                      <div class="radio-dummy"></div>
+                      Антивирус на 1 год
+                    </div></label
+                  >
+                </div>
+              </div>
+              <div class="constructor__answers-list-item">
+                <div class="master" data-master="vladimir">
+                  <div class="master__itself">
+                    <div class="master__photo">
+                      <img src="assets/img/masters/vladimir.png" alt="" />
+                      <div class="master__photo-rating">
+                        <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M7.32314 0.311523L9.77048 4.06101L14.4968 4.993L11.283 8.2423L11.7567 12.5678L7.32314 10.8265L2.88956 12.5678L3.36326 8.2423L0.149448 4.993L4.8758 4.06101L7.32314 0.311523Z"
+                            fill="#FFAB48"
+                          />
+                        </svg>
+                        5.0
+                      </div>
+                    </div>
+                    <div class="master__name">Сидоркин Владимир</div>
+                    <div class="master__props">
+                      <div class="master__props-item">Команда:</div>
+                      <div class="master__props-item">7 человек</div>
+                      <div class="master__props-item">Средний опыт:</div>
+                      <div class="master__props-item">9 лет</div>
+                      <div class="master__props-item">Специализация:</div>
+                      <div class="master__props-item">Ремонт ПК</div>
+                      <div class="master__props-item">Уникальное преимущество:</div>
+                      <div class="master__props-item">Выезд в течение 1 часа</div>
+                      <div class="master__props-item">Стоимость ремонта:</div>
+                      <div class="master__props-item master__props-item--background">от 1000 руб.</div>
+                    </div>
+                    <button class="btn btn-green" data-constructor-next>Заказать мастера</button>
+                  </div>
+                  <div class="reviews master__reviews">
+                    <div class="reviews__item">
+                      <div class="reviews__item-header">
+                        <div class="reviews__item-name">Марк З.</div>
+                        <div class="reviews__item-rating">
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                        </div>
+                        <div class="reviews__item-date">24 августа</div>
+                      </div>
+                      <div class="reviews__item-desc">
+                        Спасибо вам!!! Проблема была в том, что ноут очень сильно шумел из-за поломанного вентилятора.
+                        Мастера смогли найти деталь по приемлемой цене, но немного другой модели ноутбука, так что они
+                        даработали деталь самостоятельно. Как результат ноутбук больше не ревет как при старте ракеты. В
+                        следующий раз скорее всего буду обращаться к вам.
+                      </div>
+                    </div>
+                    <div class="reviews__item">
+                      <div class="reviews__item-header">
+                        <div class="reviews__item-name">Лена В.</div>
+                        <div class="reviews__item-rating">
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                        </div>
+                        <div class="reviews__item-date">7 июня</div>
+                      </div>
+                      <div class="reviews__item-desc">
+                        Услуга полностью выполнена) Ноутбук протестирован и ПО переустановлено. Все качественно. Мастер
+                        пунктуальный, вежливый, подсказал, как дальше оптимизировать работу ноута. Результатом довольны.
+                        Стоимость составила 2000 рублей, как и договаривались заранее по телефону. Будем рекомендовать и
+                        сами ещё раз обратимся!
+                      </div>
+                    </div>
+                    <div class="reviews__item">
+                      <div class="reviews__item-header">
+                        <div class="reviews__item-name">Евгений А.</div>
+                        <div class="reviews__item-rating">
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                        </div>
+                        <div class="reviews__item-date">14 июня</div>
+                      </div>
+                      <div class="reviews__item-desc">
+                        Уронили на кафель большой и тяжелый ноутбук в результате чего разбился экран, на угле
+                        образовались трещины, разломы и загибы алюминия, которые мешали закрыть до конца. Поменяли
+                        матрицу и выгнул в прежнее состояние по хорошей цене, вообщем прекрасная работа. Советую
+                        обращаться. Спасибо за работу!
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="master" data-master="nikolai">
+                  <div class="master__itself">
+                    <div class="master__photo">
+                      <img src="assets/img/masters/nikolai.png" alt="" />
+                      <div class="master__photo-rating">
+                        <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M7.32314 0.311523L9.77048 4.06101L14.4968 4.993L11.283 8.2423L11.7567 12.5678L7.32314 10.8265L2.88956 12.5678L3.36326 8.2423L0.149448 4.993L4.8758 4.06101L7.32314 0.311523Z"
+                            fill="#FFAB48"
+                          />
+                        </svg>
+                        4.9
+                      </div>
+                    </div>
+                    <div class="master__name">Смирнов Николай</div>
+                    <div class="master__props">
+                      <div class="master__props-item">Команда:</div>
+                      <div class="master__props-item">3 человека</div>
+                      <div class="master__props-item">Средний опыт:</div>
+                      <div class="master__props-item">6 лет</div>
+                      <div class="master__props-item">Специализация:</div>
+                      <div class="master__props-item">Ремонт ПК</div>
+                      <div class="master__props-item">Уникальное преимущество:</div>
+                      <div class="master__props-item">Выезд в течение 1 часа</div>
+                      <div class="master__props-item">Стоимость ремонта:</div>
+                      <div class="master__props-item master__props-item--background">от 1000 руб.</div>
+                    </div>
+                    <button class="btn btn-green" data-constructor-next>Заказать мастера</button>
+                  </div>
+                  <div class="reviews master__reviews">
+                    <div class="reviews__item">
+                      <div class="reviews__item-header">
+                        <div class="reviews__item-name">Мила Г.</div>
+                        <div class="reviews__item-rating">
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                        </div>
+                        <div class="reviews__item-date">4 августа</div>
+                      </div>
+                      <div class="reviews__item-desc">
+                        Даже в случае поломки техники можно найти положительные стороны. В данном случае я нашла
+                        мастера, которому можно будет и в будущем доверить любой ремонт компьютера или ноутбука! С
+                        Николаем было замечательно работать: проблема выявлена ещё на стадии размещения заказа на сайте
+                        (необходимо было поменять матрицу у ноутбука Asus), работа выполнена крайне оперативно (в
+                        выходные дни!), общение очень приятное, стоимость была озвучена сразу же, Николай всегда был на
+                        связи. В общем, теперь наша семья знает, к кому обращаться в случае технических неполадок!
+                      </div>
+                    </div>
+                    <div class="reviews__item">
+                      <div class="reviews__item-header">
+                        <div class="reviews__item-name">Зоя С.</div>
+                        <div class="reviews__item-rating">
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                        </div>
+                        <div class="reviews__item-date">5 июня</div>
+                      </div>
+                      <div class="reviews__item-desc">
+                        Спасибо за быструю работу. Отличный специалист, всегда на связи и четко объясняет суть проблемы
+                        и ее решения. Буду пользоваться его услугами в дальнейшем. Приятно иметь дело с человеком слова
+                        и мастером своего дела! Рекомендую!
+                      </div>
+                    </div>
+                    <div class="reviews__item">
+                      <div class="reviews__item-header">
+                        <div class="reviews__item-name">Виктор С.</div>
+                        <div class="reviews__item-rating">
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                        </div>
+                        <div class="reviews__item-date">6 мая</div>
+                      </div>
+                      <div class="reviews__item-desc">
+                        О работе команды Владимира могу сказать только самое хорошее. Поломка ноутбука была обнаружена,
+                        устранена, все в порядке. В плане цен и донесения до меня информации претензий нет. Владимир –
+                        очень хороший, культурный и пунктуальный человек. Обязательно буду рекомендовать его друзьям и
+                        знакомым. В компанию обращался в первый раз, остался очень доволен. Спасибо!
+                      </div>
+                    </div>
+                    <div class="reviews__item">
+                      <div class="reviews__item-header">
+                        <div class="reviews__item-name">Костя И.</div>
+                        <div class="reviews__item-rating">
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                        </div>
+                        <div class="reviews__item-date">22 сентября</div>
+                      </div>
+                      <div class="reviews__item-desc">
+                        Внимательные, аккуратные мастера. Привели в порядок компьютер, Интернет. Результат достигнут
+                        Стоимость услуг соответствовала результату. Только положительные рекомендации. Спасибо!
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="master" data-master="dmitry">
+                  <div class="master__itself">
+                    <div class="master__photo">
+                      <img src="assets/img/masters/dmitry.png" alt="" />
+                      <div class="master__photo-rating">
+                        <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M7.32314 0.311523L9.77048 4.06101L14.4968 4.993L11.283 8.2423L11.7567 12.5678L7.32314 10.8265L2.88956 12.5678L3.36326 8.2423L0.149448 4.993L4.8758 4.06101L7.32314 0.311523Z"
+                            fill="#FFAB48"
+                          />
+                        </svg>
+                        4.9
+                      </div>
+                    </div>
+                    <div class="master__name">Иванов Дмитрий</div>
+                    <div class="master__props">
+                      <div class="master__props-item">Команда:</div>
+                      <div class="master__props-item">5 человек</div>
+                      <div class="master__props-item">Средний опыт:</div>
+                      <div class="master__props-item">7 лет</div>
+                      <div class="master__props-item">Специализация:</div>
+                      <div class="master__props-item">Ремонт ПК</div>
+                      <div class="master__props-item">Уникальное преимущество:</div>
+                      <div class="master__props-item">Выезд в течение 1 часа</div>
+                      <div class="master__props-item">Стоимость ремонта:</div>
+                      <div class="master__props-item master__props-item--background">от 1500 руб.</div>
+                    </div>
+                    <button class="btn btn-green" data-constructor-next>Заказать мастера</button>
+                  </div>
+                  <div class="reviews master__reviews">
+                    <div class="reviews__item">
+                      <div class="reviews__item-header">
+                        <div class="reviews__item-name">Леша С.</div>
+                        <div class="reviews__item-rating">
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                        </div>
+                        <div class="reviews__item-date">3 мая</div>
+                      </div>
+                      <div class="reviews__item-desc">
+                        Дмитрий довольно быстро отремонтировал мне ноутбук. Мастера профессионалы, быстро, хорошо,
+                        удобно! За полчаса управились! Доброжелательные, спокойные, профессиональный подход, аккуратены,
+                        приятно было общаться. И приехали вовремя, никаких замечаний нет, все отлично! Можно поставить
+                        «пятерку с двумя плюсами»? Конечно же, можно рекомендовать! Спасибо большое! Буду советовать
+                        друзьям.
+                      </div>
+                    </div>
+                    <div class="reviews__item">
+                      <div class="reviews__item-header">
+                        <div class="reviews__item-name">Настя Б.</div>
+                        <div class="reviews__item-rating">
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                        </div>
+                        <div class="reviews__item-date">6 апреля</div>
+                      </div>
+                      <div class="reviews__item-desc">
+                        Спасибо за работу! Огромное спасибо мастерам за обслуживание, реанимировали ноутбук качественно
+                        и оперативно. Поставили нужные программы. Буду рекомендовать своим друзьям!!!) Грамотные
+                        специалисты, быстро установили причину неисправности и также быстро ее устранили.
+                      </div>
+                    </div>
+                    <div class="reviews__item">
+                      <div class="reviews__item-header">
+                        <div class="reviews__item-name">Гена Л.</div>
+                        <div class="reviews__item-rating">
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                        </div>
+                        <div class="reviews__item-date">8 февраля</div>
+                      </div>
+                      <div class="reviews__item-desc">
+                        Все отлично. Проблему мастера решили. Сделали все на совесть. Буду рекомендовать. Спокойно
+                        объяснили все непонятные моменты. Я очень доволен работой и пунктуальностью. Работы были
+                        выполнены быстрее ранее заявленного времени. Очень рекомендую! Спасибо!
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="master" data-master="alexei">
+                  <div class="master__itself">
+                    <div class="master__photo">
+                      <img src="assets/img/masters/alexei.png" alt="" />
+                      <div class="master__photo-rating">
+                        <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M7.32314 0.311523L9.77048 4.06101L14.4968 4.993L11.283 8.2423L11.7567 12.5678L7.32314 10.8265L2.88956 12.5678L3.36326 8.2423L0.149448 4.993L4.8758 4.06101L7.32314 0.311523Z"
+                            fill="#FFAB48"
+                          />
+                        </svg>
+                        4.9
+                      </div>
+                    </div>
+                    <div class="master__name">Керокин Алексей</div>
+                    <div class="master__props">
+                      <div class="master__props-item">Команда:</div>
+                      <div class="master__props-item">6 человек</div>
+                      <div class="master__props-item">Средний опыт:</div>
+                      <div class="master__props-item">8 лет</div>
+                      <div class="master__props-item">Специализация:</div>
+                      <div class="master__props-item">Ремонт моноблоков</div>
+                      <div class="master__props-item">Уникальное преимущество:</div>
+                      <div class="master__props-item">Выезд в течение 1 часа</div>
+                      <div class="master__props-item">Стоимость ремонта:</div>
+                      <div class="master__props-item master__props-item--background">от 1500 руб.</div>
+                    </div>
+                    <button class="btn btn-green" data-constructor-next>Заказать мастера</button>
+                  </div>
+                  <div class="reviews master__reviews">
+                    <div class="reviews__item">
+                      <div class="reviews__item-header">
+                        <div class="reviews__item-name">Ксюша О.</div>
+                        <div class="reviews__item-rating">
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                        </div>
+                        <div class="reviews__item-date">25 мая</div>
+                      </div>
+                      <div class="reviews__item-desc">
+                        Все отлично! Была проблема с треском охладителя у ноутбука. Все внутренности почистили, смазали,
+                        рассказали, где можно заказать новые. Провели стресс тест, треск исчез. Дали советы по поводу
+                        перегрева. Цена как договаривались до встречи. Приветливые и дружелюбные мастера! Если возникнут
+                        новые сбои обращусь снова. Очень оперативно починили ноутбук, без лишних накруток, по цене
+                        сориентировали. Работой довольны. Мастера молодецы! Спасибо!
+                      </div>
+                    </div>
+                    <div class="reviews__item">
+                      <div class="reviews__item-header">
+                        <div class="reviews__item-name">Лиза Ж.</div>
+                        <div class="reviews__item-rating">
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                        </div>
+                        <div class="reviews__item-date">15 июня</div>
+                      </div>
+                      <div class="reviews__item-desc">
+                        Здравствуйте. Сегодня отдал в ремонт свой ноутбук. Он был отремонтирован. Даже были обнаружены
+                        недочёты после ремонта другим "специалистом".))) Также получил толковую консультацию по
+                        компьютеру и устройству. Спасибо за работу!
+                      </div>
+                    </div>
+                    <div class="reviews__item">
+                      <div class="reviews__item-header">
+                        <div class="reviews__item-name">Сима Т.</div>
+                        <div class="reviews__item-rating">
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                          <svg
+                            width="20"
+                            height="19"
+                            viewBox="0 0 20 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                              fill="#FFAB48"
+                            />
+                          </svg>
+                        </div>
+                        <div class="reviews__item-date">2 апреля</div>
+                      </div>
+                      <div class="reviews__item-desc">
+                        Компетентные мастера, рекомендую к обращению. Была устранена крайне сложная в поиске и
+                        устранении проблема с запуском ОС. В случае чего, буду обращаться только к ним. Выражаю
+                        благодарность за своевременную помощь в день обращения.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="constructor__answers-list-item">
+                <div class="result-form">
+                  <div class="form-offer">Оставьте свой номер и мы свяжемся с вами</div>
+                  <span class="form-control-wrap"
+                    ><input name="fullname" class="form-control" placeholder="Ваше имя" required /> </span
+                  ><span class="form-control-wrap"
+                    ><input
+                      name="phone"
+                      type="tel"
+                      class="form-control mask-phone"
+                      placeholder="Ваш телефон"
+                      required
+                    /> </span
+                  ><button type="submit" class="btn btn-green">Перезвоните мне</button>
+                  <div class="form-text">
+                    Нажимая кнопку “Перезвоните мне”, я даю согласие на обработку персональных данных
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="constructor__footer">
+              <div class="constructor__actions-prev btn btn-green-bordered" data-constructor-prev>Назад</div>
+              <div class="constructor__actions-next btn btn-green" data-constructor-next>Следующий шаг</div>
+            </div>
+          </div>
+          <aside class="constructor__aside">
+            <div class="constructor__help">
+              <div class="constructor__help-master">
+                <div class="constructor__help-master-img"><img src="assets/img/master.png" alt="" /></div>
+                <div class="constructor__help-master-name">Мастер Валерий</div>
+              </div>
+              <div class="constructor__help-bubble">
+                В зависимости от того, какое у вас устройство, далее будет предложен список проблем.
+              </div>
+            </div>
+            <div class="constructor__gift"><img src="assets/img/gift.png" alt="" /></div>
+            <div class="constructor__devices"><img src="assets/img/devices.png" alt="" /></div>
+            <div class="constructor__current">
+              Шаг <span id="constructor-current">1</span><br /><small
+                >Осталось шагов <span id="constructor-left">6</span></small
+              >
+            </div>
+          </aside>
+          <div class="constructor__thanks">
+            <div class="constructor__thanks-content">
+              <div class="constructor__thanks-title">Спасибо</div>
+              <div class="constructor__thanks-desc">
+                Ваша заявка отправлена.<br />Мы перезвоним вам в течение<br /><span class="bold">3-х минут</span>!
+              </div>
+              <div class="constructor__thanks-mail"><img src="assets/img/mail.png" alt="" /></div>
+              <button class="btn btn-green">Готово</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/js/1.script.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
